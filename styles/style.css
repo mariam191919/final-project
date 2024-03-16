@@ -1,0 +1,223 @@
+
+/*header styles*/
+.logo{
+    width: 50px;
+    height: 50px;
+    margin-left:50px;
+}
+body{
+    background-color: antiquewhite;
+}
+.header{
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    padding-left: 32px;
+    padding-right: 32px;
+    justify-content: space-between;
+    align-items: center;
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+
+
+}
+.navigation{
+    height:50px;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    margin: 0 auto;
+    margin-top:50px;
+    
+    
+}
+.home{
+    text-decoration: underline;
+    
+}
+.home:hover{
+    background-color: red;
+}
+
+.ul-class{
+    margin-right: 100px;
+    padding-right: 20px;
+    display: flex;
+    vertical-align: middle;
+    margin-right:100px;
+
+}
+.li-class{
+    vertical-align: middle;
+    font-family:"Inter", sans-serif ;
+    font-size: 16px;
+    color:black;
+    padding-right:100px;
+
+}
+button{
+    margin-left:20px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    border: none;
+    color: black;
+}
+.sign-up{
+    color:black;
+    font-size: 20px;
+    border-radius: 10px;
+    height: 40px;
+    background-color:orange;
+    
+}
+.first-section{
+    height: 600px;
+    background-image: url(../images/crop.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+h1{
+    text-align:left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    color:white;
+    padding: 100px;
+    
+}
+.section1-p{
+    margin-left:20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color:white;
+
+}
+.main-div{
+    width: 1200px;
+    height:681px;
+
+}
+.left-side{
+    width: 547px;
+    height:681px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 200px;
+    padding-top: 50px;
+}
+.right-side{
+    width: 578px;
+    height:402px;
+    padding-left: 200px;
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+.section2-image{
+    width: 400px;
+    
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color:black;
+    padding:10px;
+}
+.section2-p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: black;
+    padding: 10px;
+}
+.read-bt{
+    margin: 20px;
+    padding: 10px;
+    color:black;
+    background-color: tomato;
+}
+.section3-div{
+    width:1200px;
+    height:500px;
+}
+
+.left-side2{
+    width: 502px;
+    height:216px;
+    padding-left: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.right-side2{
+    width: 502px;
+    height: 216px;
+    margin-left: 150px;
+    padding-left: 150px;
+    display: inline-block;
+    vertical-align: middle;
+} 
+h3{
+    font-family: "Syncopate", sans-serif; 
+    font-weight: bold;
+    font-size: 20px;
+    color:red;
+}
+.explore{
+    margin-top:20px;
+    margin-left:5px;
+    width:185px;
+    height:50px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #9F7464;
+
+}
+.section3-p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color:#373737;
+    padding: 10px;
+}
+.pictures{
+    margin-left:100px;
+
+}
+
+.red-valley{
+    width: 300px;
+    height:365px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../images/Rectangle\ 17.jpg);
+    background-repeat:no-repeat ;
+
+}
+.zelve{
+    width: 300px;
+    height:365px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../images/Rectangle\ 16.jpg);
+    background-repeat:no-repeat ;
+
+}
+.hot-air{
+    width: 300px;
+    height:365px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../images/Rectangle\ 20.jpg);
+    background-repeat:no-repeat ;
+
+}
+.love{
+    width: 300px;
+    height:365px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../images/Rectangle\ 21.jpg);
+    background-repeat:no-repeat ;
+  
+}
