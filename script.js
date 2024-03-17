@@ -13,7 +13,8 @@ const initSlider = () => {
         const handleMouseMove = (e) => {
             const deltax =e.clientX - startX;
             const newThumbPosition =thumbPosition + deltax;
-            scrollbarThumb.style.left ='$ {newThumbPosition} px';
+            scrollbarThumb.style.left =`${newThumbPosition} px`;
+            
         }
 
 
@@ -37,7 +38,7 @@ const initSlider = () => {
     const updateScrollThumbPosition = () => {
         const scrollPosition = imageList.scrollLeft;
         const thumbPosition =(scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-        scrollbarThumb.style.left = `$ {thumbPosition} px `;
+        scrollbarThumb.style.left =`${thumbPosition}px`;
     }
 
 
