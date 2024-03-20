@@ -1,3 +1,5 @@
+//carousel
+
 const initSlider = () => {
     const imageList = document.querySelector(".slider-wrapper .image-list" );
     const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
@@ -10,15 +12,29 @@ const initSlider = () => {
         const thumbPosition =scrollbarThumb.offsetLeft;
 
 
+
         const handleMouseMove = (e) => {
-            const deltax =e.clientX - startX;
-            const newThumbPosition =thumbPosition + deltax;
-            scrollbarThumb.style.left =`${newThumbPosition} px`;
+            const deltax = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltax;
+            const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width-scrollbarThumb.offsetWidth;
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+            scrollbarThumb.style.left = `${boundedPosition}px`;
+            imageList.scrollLeft = scrollPosition;
             
         }
 
+        const  handleMouseUp = () =>{
+        document.removeEventListener("mousemove", handleMouseMove);
+        document.removeEventListener("mouseup", handleMouseUp);
+
+        }
 
         document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+
+
+        
 
     });
 
@@ -50,3 +66,76 @@ const initSlider = () => {
 
 
 window.addEventListener("load", initSlider);
+
+
+//form validation
+
+const form = document.getElementById('form');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const password2 = document.getElementById('password2');
+
+
+
+form.addEventListener('submit', e =>{
+    e.preventDefault();
+    
+    validateInputs();
+
+});
+
+const setError = (eLement, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success')
+}
+const setSuccess = eLement => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('successs');
+    inputControl.classList.remove('error');
+
+};
+const isValidEmail = Email =>{
+    const re= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    return re.test(String(email).toLowerCase());
+}
+
+
+const validateInputs = () => {
+    const usernameValue = username.Value.trim();
+    const emailValue = email.Value.trim();
+    const passwordValue = password.Value.trim();
+    const password2Value =password2.Value.trim();
+
+    if(usernameValue === ''){
+        setError(username, 'Username is required');
+    } else {
+        setSuccess(username);
+    }
+
+    if (emailValue === ''){
+        setError(email, 'Email is required');
+
+    } else if (!isValidEmail(emailValue)){
+        setError(email, 'Provide a valid email address');
+    } else {
+        setSuccess(email);
+    }
+    if(passwordValue === ''){
+        setError(password2, 'Please confirm your password');
+    } else if(password2Value !== passwordValue){
+        setError(password2, "Password doesnt match");
+    } else {
+        setSuccess(password2);
+    }
+
+
+};
