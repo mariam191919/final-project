@@ -85,7 +85,7 @@ form.addEventListener('submit', e =>{
 
 });
 
-const setError = (eLement, message) => {
+const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
 
@@ -93,8 +93,8 @@ const setError = (eLement, message) => {
     inputControl.classList.add('error');
     inputControl.classList.remove('success')
 }
-const setSuccess = eLement => {
-    const inputControl = element.parentElement;
+const setSuccess = element => {
+    const inputControl =element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
 
 
@@ -110,10 +110,10 @@ const isValidEmail = Email =>{
 
 
 const validateInputs = () => {
-    const usernameValue = username.Value.trim();
-    const emailValue = email.Value.trim();
-    const passwordValue = password.Value.trim();
-    const password2Value =password2.Value.trim();
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+    const password2Value =password2.value.trim();
 
     if(usernameValue === ''){
         setError(username, 'Username is required');
