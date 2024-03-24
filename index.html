@@ -12,36 +12,48 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="./node_modules/moveto/dist/moveTo.min.js"></script>
 <script src="script.js" defer></script>
+
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media.css">
 </head>
 <body>
     <header class="header">
+        <a href="index.html" alt="#">
         <img class="logo" src="images/hot-air-balloon 1.png" alt="logo">
-        <a href="index.html" alt="#"></a>
-        <nav class="navigation">
-            <ul class="ul-class">
-                <li class="li-class home">Home</li>
-                <li class="li-class">Explore</li>
-                <li class="li-class">Travel</li>
-                <li class="li-class">Blog</li>
-                <li class="li-class">Pricing</li>
+        </a>
+        <nav>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+                <li><a href="#" >Home</a></li>
+                <li><a href="#" >Explore</a></li>
+                <li><a href="#" >Travel</a></li>
+                <li><a href="#" >Blog</a></li>
+                <li><a href="#" >Pricing</a></li>
+                </ul>
+                
+
+            <ul>
+            <li class="hideonMobile"><a href="#first" >Home</a></li>
+            <li class="hideonMobile"><a href="#explore" >Explore</a></li>
+            <li class="hideonMobile"><a href="#section2" >Travel</a></li>
+            <li class="hideonMobile" ><a href="#blog" >Blog</a></li>
+            <li class="hideonMobile" ><a href="#pricing" >Pricing</a></li>
+            <li class="menu-button" onclick="showSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
             </ul>
-            <button class="login">Login</button>
-            <button class="sign-up">Sign up</button>
+            
         </nav>
- 
     </header>
     <main>
-        <section class="first-section">
+        <section id="first" class="first-section">
          <h1>Explore Cappadocia</h1>
         <p class="section1-p">Our world is incredibly beautiful, with a rich diversity of landscapes, cultures, and wildlife. Follow us to enjoy these moments.</p>   
         </div>
 
         </section>
-        <section class="section-2">
+        <section id="section2" class="section-2">
             <div class="main-div">
             <div class="left-side">
                 <img class="section2-image" src="images/image.jpg" alt="image">
@@ -65,7 +77,7 @@
             </div>
         
         </section>
-        <section class="section3">
+        <section id="explore" class="section3">
             <div class="section3-div">
                 <div class="left-side2">
       <h3>Let’s see Cappadocia with us and with you</h3>
@@ -124,7 +136,7 @@
                 
 
         </section>
-        <section class="section4">
+        <section id="blog" class="section4">
             <div class="section4-maindiv">
                 <div class="section4-leftside">
                     <h5>Our Blog about Capadocia</h5>
@@ -177,7 +189,7 @@
 
 
         </section>
-        <section class="section5">
+        <section id="pricing" class="section5">
             <div class="maindiv-section5">
 
     
@@ -219,6 +231,7 @@
             </div>
 
         </section>
+        
     </main>
     <footer class="footer">
         <div class="footer-container">

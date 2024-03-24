@@ -16,60 +16,77 @@ body{
     padding-right: 32px;
     justify-content: space-between;
     align-items: center;
-    /*position: fixed;*/
+    position: fixed;
+    z-index:999;
     top: 0;
     left: 0;
-
-
 }
-.navigation{
-    height:50px;
+.header.active{
+   width: 100%;
+    background-color:peachpuff;
     display: flex;
+    padding-left: 32px;
+    padding-right: 32px;
     justify-content: space-between;
-    vertical-align: middle;
-    margin: 0 auto;
-    margin-top:50px;
-    
-    
-}
-.home{
-    text-decoration: underline;
-    
-}
-.home:hover{
-    background-color: red;
+    align-items: center;
+    position: fixed;
+    z-index:999;
+    top: 0;
+    left: 0;
 }
 
-.ul-class{
-    margin-right: 100px;
-    padding-right: 20px;
+/*nav{
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    
+}*/
+
+nav ul {
+    width: 100%;
+    list-style: none;
     display: flex;
-    vertical-align: middle;
-    margin-right:100px;
-
+    justify-content: flex-end;
+    align-items: center;
 }
-.li-class{
-    vertical-align: middle;
-    font-family:"Inter", sans-serif ;
+nav li{
+    height: 50px;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    color:black;
-    padding-right:100px;
-
+    font-weight: 600;
+    color: #000;
 }
-.login{
-    margin-left:20px;
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    border: none;
-    color: black;
-}
-.sign-up{
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
     color:black;
-    font-size: 20px;
-    border-radius: 10px;
-    height: 40px;
-    background-color:orange;
-    
+}
+nav a:hover{
+    background-color: whitesmoke;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    background-color:antiquewhite;
+    box-shadow: -10px 0 10px rgba( 0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
 }
 
 /*first section */

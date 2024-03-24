@@ -1,5 +1,5 @@
 //carousel
-
+"use strict";
 const initSlider = () => {
     const imageList = document.querySelector(".slider-wrapper .image-list" );
     const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
@@ -139,3 +139,58 @@ const validateInputs = () => {
 
 
 };
+//hamburger menu
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+
+}
+
+//header scroll changes
+const header = document.querySelector('.header');
+window.onscroll = function(){
+var top = window.scrollY;
+console.log(top);
+if (top >=100){
+    header.classList.add('active')
+}else{
+header.classList.remove('active');
+}
+}
+//Fetch
+//fetch('https://jsonplaceholder.typicode.com/users')
+/*.then(res =>{
+    return res.json();
+})
+.then(data =>{
+    data.forEach(user => {
+        const markup =`<li>%{user.name}</li>`;
+        document.querySelector('ul').insertAdjacentHTML('beforeend', markup);
+
+    })
+})
+.catch(error => console.log(error))*/
+
+//npm
+
+const moveTo = new MoveTo();
+const linkArray = document.querySelectorAll(".hideonMobile");
+// console.log(linkArray); 
+
+linkArray.forEach((item) => {
+  // console.log(item); 
+  item.addEventListener("click", handleClick);
+});
+
+function handleClick(e) {
+  e.preventDefault();
+
+  console.log(this); 
+  const scrollElement = document.querySelector(this.getAttribute("href"));
+  //  console.log(scrollElement); 
+  moveTo.move(scrollElement);
+}

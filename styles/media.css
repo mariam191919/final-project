@@ -33,3 +33,46 @@
         grid-template-columns: repeat(1,1fr);
 }
 }
+
+@media(max-width: 768px){
+    .hamburger{
+        display: block;
+    }
+    
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translate(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translate(-8px) rotate(-45deg);
+    }
+    .navigation{
+        position: fixed;
+        left:-100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: antiquewhite;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+
+    }
+    .li-class{
+        margin: 16px 0;
+    }
+    .navigation.active{
+        left:0;
+    }
+}
+
+@media(max-width:500px){
+    .hideonMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
