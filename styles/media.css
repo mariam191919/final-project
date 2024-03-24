@@ -27,8 +27,23 @@
     }
     .section2-image{
         width: 400px;
-    }    
-
+    }
+    
+    .left-side2{
+        width: 302px;
+        height:216px;
+        padding-left: 150px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .right-side2{
+        width: 302px;
+        height: 216px;
+        margin-left: 150px;
+        padding-left: 150px;
+        display: inline-block;
+        vertical-align: middle;
+    } 
 
 
 

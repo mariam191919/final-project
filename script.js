@@ -1,3 +1,4 @@
+
 //carousel
 "use strict";
 const initSlider = () => {
@@ -75,6 +76,7 @@ const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
+const select =  document.getElementById('select');
 
 
 
@@ -105,15 +107,15 @@ const setSuccess = element => {
 };
 const isValidEmail = Email =>{
     const re= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-    return re.test(String(email).toLowerCase());
+    return re.test(String(Email).toLowerCase());
 }
-
 
 const validateInputs = () => {
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
     const password2Value =password2.value.trim();
+    const selectValue =select.value.trim();
 
     if(usernameValue === ''){
         setError(username, 'Username is required');
@@ -129,15 +131,19 @@ const validateInputs = () => {
     } else {
         setSuccess(email);
     }
+    if(selectValue === ''){
+        setError(select, 'Please Select a Country');
+    } 
+    if(passwordValue === ''){
+        setError(password, 'Password is Required');
+    } 
     if(passwordValue === ''){
         setError(password2, 'Please confirm your password');
     } else if(password2Value !== passwordValue){
-        setError(password2, "Password doesnt match");
+        setError(password2, "Password doesn't match");
     } else {
         setSuccess(password2);
     }
-
-
 };
 //hamburger menu
 function showSidebar(){
@@ -153,8 +159,7 @@ function hideSidebar(){
 //header scroll changes
 const header = document.querySelector('.header');
 window.onscroll = function(){
-var top = window.scrollY;
-console.log(top);
+let top = window.scrollY;
 if (top >=100){
     header.classList.add('active')
 }else{
@@ -162,35 +167,30 @@ header.classList.remove('active');
 }
 }
 //Fetch
-//fetch('https://jsonplaceholder.typicode.com/users')
-/*.then(res =>{
+fetch('https://countryinfoapi.com/api/countries')
+.then(res =>{
     return res.json();
 })
 .then(data =>{
-    data.forEach(user => {
-        const markup =`<li>%{user.name}</li>`;
-        document.querySelector('ul').insertAdjacentHTML('beforeend', markup);
-
+    data.forEach(country => {
+        const markup =`<option>${country.name}</option>`;
+        document.querySelector('select').insertAdjacentHTML('beforeend', markup);
     })
 })
-.catch(error => console.log(error))*/
+.catch(error => console.log(error))
 
 //npm
 
 const moveTo = new MoveTo();
-const linkArray = document.querySelectorAll(".hideonMobile");
-// console.log(linkArray); 
+const linkArray = document.querySelectorAll(".nav-a");
 
 linkArray.forEach((item) => {
-  // console.log(item); 
   item.addEventListener("click", handleClick);
 });
 
 function handleClick(e) {
   e.preventDefault();
 
-  console.log(this); 
   const scrollElement = document.querySelector(this.getAttribute("href"));
-  //  console.log(scrollElement); 
   moveTo.move(scrollElement);
 }

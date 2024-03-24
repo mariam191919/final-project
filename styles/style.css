@@ -1,5 +1,4 @@
-
-/*
+*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
@@ -134,9 +133,7 @@ nav a:hover{
     background-image: url(../images/crop.webp);
     background-repeat: no-repeat;
     background-size: cover;
-
 }
-
 
 h1{
     text-align:left;
@@ -144,15 +141,14 @@ h1{
     font-size: 50px;
     color:white;
     padding: 100px;
-    
 }
 .section1-p{
     margin-left:20px;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color:white;
-
 }
+
 /*second section*/
 .section-2{
     width: 1200px;
@@ -419,9 +415,6 @@ h5{
     width: 1200px;
     height:600px;
     margin: 0 auto;
-
-    
-
 }
 .section5-leftside{
     margin-left:150px;
@@ -503,9 +496,9 @@ width: 100%;
 .footer{
     position: relative;
     width: 100%;
-    height: auto;
+    height: 400px;
     padding: 50px 100px;
-    margin-top:300px;
+
     background-color: #9F7464;
 }
 .footer-container{
@@ -608,3 +601,16 @@ footer .footer-container .sec p{
     text-align: center;
     color:white;
 }
+
+.error {
+    color: red;
+}
+
+.selectWrapper {
+    margin-top: 10px;
+}
+select {
+    width: 100%;
+    margin-top: 5px;
+}
+
