@@ -1,4 +1,12 @@
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
 /*header styles*/
 .logo{
     width: 50px;
@@ -11,11 +19,17 @@ body{
 .header{
     width: 100%;
     background-color: antiquewhite;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-left: 32px;
     padding-right: 32px;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: fixed;
     z-index:999;
     top: 0;
@@ -24,11 +38,17 @@ body{
 .header.active{
    width: 100%;
     background-color:peachpuff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-left: 32px;
     padding-right: 32px;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: fixed;
     z-index:999;
     top: 0;
@@ -43,9 +63,15 @@ body{
 nav ul {
     width: 100%;
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 nav li{
     height: 50px;
@@ -57,8 +83,12 @@ nav li{
 nav a{
     height: 100%;
     padding: 0 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color:black;
 }
 nav a:hover{
@@ -71,13 +101,22 @@ nav a:hover{
     height: 100vh;
     width: 250px;
     z-index: 999;
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     background-color:antiquewhite;
-    box-shadow: -10px 0 10px rgba( 0, 0, 0, 0.1);
+    -webkit-box-shadow: -10px 0 10px rgba( 0, 0, 0, 0.1);
+            box-shadow: -10px 0 10px rgba( 0, 0, 0, 0.1);
     display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
 }
 .sidebar li{
     width: 100%;
@@ -236,7 +275,9 @@ h3{
     font-size: 2.2rem;
     cursor:pointer;
     border-radius: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
 
 .slider-wrapper .slide-button#prev-slide{
@@ -248,12 +289,14 @@ h3{
     right:-20px;
 }
 .slider-wrapper .image-list{
+    display: -ms-grid;
     display: grid;
     gap:18px;
     font-size: 0;
     margin-bottom:30px;
     scrollbar-width: none;
     overflow-x: auto;
+    -ms-grid-columns: 1fr 18px 1fr 18px 1fr 18px 1fr 18px 1fr 18px 1fr 18px 1fr 18px 1fr 18px 1fr 18px 1fr;
     grid-template-columns: repeat(10, 1fr);
 }
 .slider-wrapper .image-list::-webkit-scrollbar{
@@ -262,13 +305,18 @@ h3{
 .slider-wrapper .image-list .image-item{
     width: 325px;
     height:400px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 .container .slider-scrollbar{
     height:24px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .slider-scrollbar .scrollbar-track{
     height:2px;
@@ -287,10 +335,12 @@ h3{
     position: absolute;
     background: #000;
     border-radius: inherit;
+    cursor:-webkit-grab;
     cursor:grab;
 } 
 
 .slider-scrollbar .scrollbar-thumb:active{
+    cursor: -webkit-grabbing;
     cursor: grabbing;
     height: 8px;
     top:-2px;
@@ -420,8 +470,13 @@ h5{
 }
 
 .input-control{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .input-control input{
 border: 2px solid #f0f0f0;
@@ -456,7 +511,9 @@ width: 100%;
 }
 .footer-container{
     width: 100%;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 2fr 20px 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-gap: 20px;
 }
@@ -483,7 +540,9 @@ footer .footer-container .sec p{
 }
 .sci{
     margin-top: 20px;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: (50px)[4];
     grid-template-columns: repeat(4,50px);
 }
 .sci li{
@@ -494,9 +553,13 @@ footer .footer-container .sec p{
     width: 48px;
     height: 48px;
     background: bisque;
+    display: -ms-grid;
     display: grid;
-    align-content: center;
-    justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-decoration: none;
     border-radius: 4px;
 }
@@ -519,7 +582,9 @@ footer .footer-container .sec p{
     position: relative;
 }
 .info li{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 30px 1fr;
     grid-template-columns: 30px 1fr;
     margin-bottom: 16px;
 
