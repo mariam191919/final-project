@@ -1,4 +1,37 @@
-@media (max-width:1023px){
+@media (max-width:1000px){
+    .first-section{
+        width: 100%;
+    }
+    .section-2{
+        width: 1000px;
+    }
+    .main-div{
+        width: 1000px;
+        
+    }
+    .left-side{
+        width: 447px;
+        height:581px;
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 200px;
+        padding-top: 50px;
+    }
+    .right-side{
+        width: 478px;
+        height:302px;
+        padding-left: 200px;
+        display: inline-block;
+        vertical-align: middle;
+        
+    }
+    .section2-image{
+        width: 400px;
+    }    
+
+
+
+
     .slider-wrapper .slide-button{
         display: none !important;
     }
