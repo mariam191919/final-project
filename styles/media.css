@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @media (max-width:1000px){
     .first-section{
         width: 100%;
@@ -120,15 +127,15 @@
     margin-top: 100px;
 
 }
+}
 
-}
-}
 
 @media(max-width: 991px){
     footer{
         padding: 40px;
     }
     footer .footer-container{
+        -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2,1fr);
     }
     .copyrightText{
@@ -137,6 +144,7 @@
 }
 @media(max-width: 768px){
     footer .footer-container{
+        -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1,1fr);
 }
 }
@@ -150,20 +158,29 @@
         opacity: 0;
     }
     .hamburger.active .bar:nth-child(1){
-        transform: translate(8px) rotate(45deg);
+        -webkit-transform: translate(8px) rotate(45deg);
+            -ms-transform: translate(8px) rotate(45deg);
+                transform: translate(8px) rotate(45deg);
     }
     .hamburger.active .bar:nth-child(3){
-        transform: translate(-8px) rotate(-45deg);
+        -webkit-transform: translate(-8px) rotate(-45deg);
+            -ms-transform: translate(-8px) rotate(-45deg);
+                transform: translate(-8px) rotate(-45deg);
     }
     .navigation{
         position: fixed;
         left:-100%;
         top: 70px;
         gap: 0;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         background-color: antiquewhite;
         width: 100%;
         text-align: center;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
 
     }
